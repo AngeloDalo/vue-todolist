@@ -31,7 +31,7 @@ main {
 .add-mission .input {
     padding: 1em;
     border: 3px solid red;
-    width: 15%;
+    width: 42%;
     display: flex;
     justify-content: center;
     margin: auto;
