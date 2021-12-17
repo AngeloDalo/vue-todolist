@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="app">
+        <header>
+            <h1 class="title">checklist mission</h1>
+            <p>add mission, once completed click to bar it</p>
+        </header>
+        <main>
+            <div class="add-mission">
+                <div class="input">
+                    <input type="text" placeholder="Add Mission" class="text-input" v-model="newMission">
+                    <i class="fas fa-plus" @click="addMission"></i>
+                </div>
+                <div class="container-mission">
+                    <ul>
+                        <li class="single-mission" v-for="(mission, index) in missions">
+                            <span @click="addCheck(index)" :class="(mission.done == 1) ? 'check' : ''"> {{ mission.text }} </span>
+                            <i class="fas fa-clipboard-check" @click="addCheck(index)"></i>
+                            <i class="fas fa-trash-alt" @click="delateMission(index)"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
