@@ -69,3 +69,7 @@ main {
 .single-mission i {
     font-size: 2em;
 }
+
+li span.check {
+    text-decoration: line-through;
+}

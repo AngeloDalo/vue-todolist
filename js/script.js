@@ -29,13 +29,20 @@ const app = new Vue(
                 if (this.newMission.length != 0) {
                     let obj = {
                         text: this.newMission,
-                        done: false
+                        done: 0
                     }
                     this.missions.push(obj);
                 }
             },
             delateMission: function(index) {
                 this.missions.splice(index, 1);
+            },
+            addUnderline: function(index) {
+                if (this.missions[index].done == 0) {
+                    this.missions[index].done = 1;
+                } else {
+                    this.missions[index].done = 0;
+                }
             }
         }
     }

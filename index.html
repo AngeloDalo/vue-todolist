@@ -24,8 +24,8 @@
                 <div class="container-mission">
                     <ul>
                         <li class="single-mission" v-for="(mission, index) in missions">
-                            <span> {{ mission.text }} </span>
-                            <i class="fas fa-clipboard-check"></i>
+                            <span :class="(mission.done == 1) ? 'check' : ''"> {{ mission.text }} </span>
+                            <i class="fas fa-clipboard-check" @click="addUnderline(index)"></i>
                             <i class="fas fa-trash-alt" @click="delateMission(index)"></i>
                         </li>
                     </ul>
