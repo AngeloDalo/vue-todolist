@@ -33,6 +33,9 @@ const app = new Vue(
                     }
                     this.missions.push(obj);
                 }
+            },
+            delateMission: function(index) {
+                this.missions.splice(index, 1);
             }
         }
     }
