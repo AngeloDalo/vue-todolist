@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+.container {
+    padding-top: 3em;
+    background-color: rgb(120, 183, 219);
+}
+
+header {
+    text-align: center;
+    width: 100%;
+    color: black;
+}
+
+.title, header p {
+    text-transform: uppercase;
+}
+
+main {
+    width: 100%;
+    margin-top: 2em;
+}
+
+.add-mission .input {
+    padding: 1em;
+    border: 3px solid red;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border-radius: 2em;
+}
+
+.text-input {
+    margin-right: 1em;
+    border-style: none;
+    outline: none;
+    background-color: rgb(120, 183, 219);
+}
+
+.container-mission ul {
+    margin: auto;
+    list-style: none;
+    width: 60%;
+    border: 2px solid green;
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-around;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(210,210,252,1) 13%, rgba(0,212,255,1) 100%);
+}
+
+.single-mission span {
+    margin-right: 5em;
+}
+
+.single-mission i {
+    font-size: 2em;
+}
