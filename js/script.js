@@ -16,12 +16,24 @@ Bonus:
 
 const app = new Vue(
     {
-      el: '#app',
-      data: {
-      },
+        el: '#app',
+        data: {
+            newMission: "",
+            missions: [
 
-      methods: {
+            ]
+        },
 
-      }
+        methods: {
+            addMission: function() {
+                if (this.newMission.length != 0) {
+                    let obj = {
+                        text: this.newMission,
+                        done: false
+                    }
+                    this.missions.push(obj);
+                }
+            }
+        }
     }
   );

@@ -18,13 +18,13 @@
         <main>
             <div class="add-mission">
                 <div class="input">
-                    <input type="text" placeholder="Add Mission" class="text-input">
-                    <i class="fas fa-plus"></i>
+                    <input type="text" placeholder="Add Mission" class="text-input" v-model="newMission">
+                    <i class="fas fa-plus" @click="addMission"></i>
                 </div>
                 <div class="container-mission">
                     <ul>
-                        <li class="single-mission">
-                            <span>Missione di prova</span>
+                        <li class="single-mission" v-for="(mission, index) in missions">
+                            <span> {{ mission.text }} </span>
                             <i class="fas fa-clipboard-check"></i>
                             <i class="fas fa-trash-alt"></i>
                         </li>
@@ -33,5 +33,6 @@
             </div>
         </main>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>

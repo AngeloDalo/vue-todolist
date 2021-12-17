@@ -46,15 +46,20 @@ main {
 }
 
 .container-mission ul {
+    padding-top: 1em;
+    text-align: center;
     margin: auto;
     list-style: none;
     width: 60%;
     border: 2px solid green;
     margin-top: 2em;
-    display: flex;
-    justify-content: space-around;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(210,210,252,1) 13%, rgba(0,212,255,1) 100%);
+}
+
+.container-mission ul li {
+    margin-bottom: 1em;
+    width: 100%;
 }
 
 .single-mission span {
